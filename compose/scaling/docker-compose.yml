@@ -1,0 +1,7 @@
+cheapexample:
+  build: .
+  dockerfile: dockerfile_cheap
+
+folding:
+  image: jordan0day/folding-at-home
+

@@ -1,0 +1,12 @@
+<?php
+$AUTOCONFIG = array(
+  "dbtype"        => "mysql",
+  "dbname"        => "owncloud",
+  "dbuser"        => "__DBUSER__",
+  "dbpass"        => "__DBPASSWD__",
+  "dbhost"        => "__DB__",
+  "dbtableprefix" => "",
+  "adminlogin"    => "__ADMINUSER__",
+  "adminpass"     => "__ADMINPASSWD__",
+  "directory"     => "/data",
+);

@@ -1,0 +1,5 @@
+FROM busybox
+MAINTAINER Mattias Giese <giese@b1-systems.de>
+
+ADD ./app.sh /
+ENTRYPOINT '/app.sh'

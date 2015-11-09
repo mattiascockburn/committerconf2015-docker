@@ -1,0 +1,19 @@
+owncloud:
+  ports: 
+    - 9090:80
+  build: owncloud/
+  environment:
+    ADMINUSER: admin
+    ADMINPASSWD: admin
+    DBUSER: owncloud
+    DBPASSWD: owncloud
+    DB: cc_db_1
+  volumes:
+    - '/data' 
+db:
+  image: mariadb
+  environment:
+    MYSQL_ROOT_PASSWORD: 'just testing'
+    MYSQL_USER: owncloud
+    MYSQL_PASSWORD: owncloud
+    MYSQL_DATABASE: owncloud

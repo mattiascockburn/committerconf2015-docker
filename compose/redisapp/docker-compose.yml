@@ -1,0 +1,16 @@
+web:
+  build: .
+  command: python /code/app.py
+  ports:
+  - "5000:5000"
+  environment:
+    - REDIS_HOST=cc_redis-master_1
+    - "affinity:image==~orchardup/python:2.7"
+    
+redis-master:
+  image: redis
+redis-slave:
+  image: redis
+  command: redis-server --slaveof cc_redis-master_1 6379 --appendonly yes
+  environment:
+    - "constraint:container!=cc_redis-master_1"
