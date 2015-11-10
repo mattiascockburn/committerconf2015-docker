@@ -1,6 +1,8 @@
 # committerconf2015-docker
 Files used in the presentation i gave at Committerconf 2015
 
+You need at least docker-machine 0.5.0, docker-compose 1.5.0 and docker 1.9.0
+
 ## Stand up a cluster of machines
 
 ```
