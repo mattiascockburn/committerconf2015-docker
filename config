@@ -1,2 +1,18 @@
+#DRIVER=digitalocean
 DRIVER=virtualbox
 NUM_INSTANCES=2
+LAME_INTERNET=0
+
+# DO specific settings
+export DIGITALOCEAN_REGION=fra1
+export DIGITALOCEAN_PRIVATE_NETWORKING=1
+#export DIGITALOCEAN_IMAGE=ubuntu-15-04-x64
+#export DIGITALOCEAN_IMAGE=fedora-22-x64
+
+# additional options which should be passed to docker-machine
+#CREATE_OPTIONS='--engine-insecure-registry 10.2.2.254:5000 --swarm-image 10.2.2.254:5000/swarm:latest'
+CREATE_OPTIONS=''
+
+# used with LAME_INTERNET=1
+IMAGEPATH=$HOME/docker-temp
+B2D_URL=http://10.2.2.254:9090/boot2docker.iso

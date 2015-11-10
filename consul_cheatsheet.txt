@@ -1,0 +1,11 @@
+CONSUL=192.168.99.109
+
+curl -v http://$CONSUL:8500/v1/kv/?recurse | jq
+
+Payloads are base64 encoded, maxsize: 512kb
+
+curl -X PUT -d 'test' http://$CONSUL:8500/v1/kv/web/key1
+curl -X PUT -d 'test' http://$CONSUL:8500/v1/kv/web/key2?flags=42
+curl -X PUT -d 'test'  http://$CONSUL:8500/v1/kv/web/sub/key3
+
+curl http://$CONSUL:8500/v1/kv/web/sub/key3
